@@ -50,7 +50,6 @@ function AddProductPage() {
     );
     const newPhotos = response.data.fileNames;
     setImagePreviews((prev) => [...prev, ...newPhotos]);
-    console.log(newPhotos);
   }
 
   //This Function will handle form submission

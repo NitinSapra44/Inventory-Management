@@ -20,7 +20,6 @@ export default function ImageSlider() {
       .post("http://localhost:5000/product/find-product-by-id", data)
       .then((response) => {
         if (response.data.cover) {
-          console.log(response.data);
           setProduct(response.data.cover);
           setRelatedBottoms(response.data.bottom);
         } else {
@@ -50,7 +49,7 @@ export default function ImageSlider() {
       "http://localhost:5000/transaction",
       printData
     );
-    console.log(response.data);
+
     navigate(0);
   }
 
@@ -65,7 +64,7 @@ export default function ImageSlider() {
       "http://localhost:5000/transaction",
       dispatchData
     );
-    console.log(response.data);
+
     navigate(0);
   }
 

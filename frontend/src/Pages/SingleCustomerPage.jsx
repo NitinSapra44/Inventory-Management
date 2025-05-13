@@ -14,7 +14,6 @@ function SingleCustomerPage() {
       .post("http://localhost:5000/customer/products", data)
       .then((response) => {
         setProducts(response.data);
-        console.log(response.data);
       });
   }, []);
 

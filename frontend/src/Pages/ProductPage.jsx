@@ -13,7 +13,6 @@ function ProductPage() {
       .get("http://localhost:5000/product/find-products")
       .then((response) => {
         setProducts(response.data);
-        console.log(response.data);
       });
   }, []);
 

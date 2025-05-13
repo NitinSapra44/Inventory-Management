@@ -16,7 +16,6 @@ const UserState = (props) => {
           withCredentials: true,
         })
         .then((response) => {
-          console.log(response.data);
           setUser(response.data);
           setReady(true);
         })
