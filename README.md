@@ -22,3 +22,5 @@ npm install
 this will install all the required dependencies to run this project.
 
 Also,we are using concurrently in our project so when you install all the dependencies in both the folders you can come to root directory and run the command npm run dev this will turn on both frontend and backend simoultaneously.
+
+
