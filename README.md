@@ -10,3 +10,15 @@ Tech Stacks Used:-
 6. TailWind For Styling
 
 We have Added Forms to add customers and there products.It is specifically made for a box industry.A box consist of 2 Parts a Top also Known as Cover and a Bottom.When both of them Combine a box is made.So we are managing both cover and bottom.It also gives us a To-do List which will tell us the products which are less than 1500 and are ready to be prepared again.When i enter cover's quantity that is dispatched i get similar size bottoms shown on the same page because a cover can have multiple bottoms.We also have a daybook which will give us all the entries print/dipatched that happened during that time period.
+
+To Run the Project firstly in the root directory
+
+cd frontend
+npm install
+
+cd backend
+npm install
+
+this will install all the required dependencies to run this project.
+
+Also,we are using concurrently in our project so when you install all the dependencies in both the folders you can come to root directory and run the command npm run dev this will turn on both frontend and backend simoultaneously.
