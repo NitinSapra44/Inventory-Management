@@ -44,8 +44,3 @@ app.use("/customer", CustomerRouter);
 app.listen(process.env.PORT || 5000, () => {
   console.log("Server is listening on port 5000");
 });
-
-// mongodb+srv://nitinsapra2000:Bbm0stokwaMjdh7z@saprapackers.kqtekzt.mongodb.net/?retryWrites=true&w=majority&appName=SapraPackers
-
-// // nitinsapra2000
-// // Bbm0stokwaMjdh7z
