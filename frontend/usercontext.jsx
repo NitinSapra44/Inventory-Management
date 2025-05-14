@@ -12,7 +12,7 @@ const UserState = (props) => {
   useEffect(() => {
     if (!user) {
       axios
-        .get("http://localhost:5000/user/profile", {
+        .get("https://inventory-management-backend-xdly.onrender.com/user/profile", {
           withCredentials: true,
         })
         .then((response) => {
