@@ -7,7 +7,7 @@ function ToDoJobs() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/product/find-products-ready-to-print")
+      .get("https://inventory-management-backend-xdly.onrender.com/product/find-products-ready-to-print")
       .then((res) => {
         setProduct(res.data);
         console.log(res.data);
