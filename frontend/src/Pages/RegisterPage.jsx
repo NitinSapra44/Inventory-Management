@@ -21,7 +21,7 @@ function RegisterPage() {
     const data = { email, name, password };
 
     axios
-      .post("http://localhost:5000/user/register", data)
+      .post("https://inventory-management-backend-xdly.onrender.com/user/register", data)
       .then(() => {
         alert("User Registration Successful");
         navigate("/");
