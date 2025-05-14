@@ -43,7 +43,7 @@ async function loginUser(req, res) {
         const token = TokenMaker(checkExistingUser);
         res.cookie("token", token, {
           httpOnly: true, // Hides the cookie from JavaScript (prevents XSS)
-          secure: false, // Set to true in production with HTTPS
+          secure: true, // Set to true in production with HTTPS
           sameSite: "lax", // Prevents CSRF (allows top-level navigations)
           maxAge: 24 * 60 * 60 * 1000, // Expires in 1 day
         });
