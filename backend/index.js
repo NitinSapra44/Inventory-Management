@@ -41,6 +41,8 @@ app.use("/product", ProductRouter);
 app.use("/", TransactionRouter);
 app.use("/customer", CustomerRouter);
 
-app.listen(process.env.PORT || 5000, () => {
-  console.log("Server is listening on port 5000");
+const Port = process.env.PORT || 5000;
+
+app.listen(Port, () => {
+  console.log(`Server is listening on port ${Port}`);
 });
