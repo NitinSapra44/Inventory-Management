@@ -9,7 +9,7 @@ function CustomerPage() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/customer/find-customer")
+      .get("https://inventory-management-backend-xdly.onrender.com/customer/find-customer")
       .then((response) => {
         setCustomer(response.data);
       });
