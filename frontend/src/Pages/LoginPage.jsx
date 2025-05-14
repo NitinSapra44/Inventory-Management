@@ -16,7 +16,7 @@ function LoginPage() {
       ev.preventDefault();
       const data = { email, password };
       const response = await axios.post(
-        "http://localhost:5000/user/login",
+        "https://inventory-management-backend-xdly.onrender.com/user/login",
         data,
         {
           withCredentials: true,
