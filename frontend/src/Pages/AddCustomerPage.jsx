@@ -17,7 +17,7 @@ function AddCustomer() {
         address,
       };
       const response = await axios.post(
-        "http://localhost:5000/customer/addcustomer",
+        "https://inventory-management-backend-xdly.onrender.com/customer/addcustomer",
         data
       );
       alert(response.data.message || "Customer Successfully registered");
