@@ -15,7 +15,8 @@ export default function ImageSlider() {
   const [relatedBottoms, setRelatedBottoms] = useState([]);
 
   const data = { id };
-  useEffect(() => {
+
+  const fetchProduct = () => {
     axios
       .post("https://inventory-management-backend-xdly.onrender.com/product/find-product-by-id", data)
       .then((response) => {
@@ -30,7 +31,13 @@ export default function ImageSlider() {
       .catch((err) => {
         console.error("Error fetching product:", err);
       });
+  };
+
+  useEffect(() => {
+    fetchProduct();
   }, [id]);
+
+
 
   const goToPrevious = () => {
     const isFirst = currentIndex === 0;
@@ -46,8 +53,8 @@ export default function ImageSlider() {
     ev.preventDefault();
     const printData = { productId: id, type: "print", quantity: printQuantity };
     await axios.post("https://inventory-management-backend-xdly.onrender.com/transaction", printData);
-
-    navigate(0);
+    setPrintQuantity(""); // clear input
+    fetchProduct();
   }
 
   async function setDispatchTransaction(ev) {
@@ -59,7 +66,8 @@ export default function ImageSlider() {
     };
     await axios.post("https://inventory-management-backend-xdly.onrender.com/transaction", dispatchData);
 
-    navigate(0);
+    setDispatchQuantity(""); // clear input
+    fetchProduct();
   }
 
   if (!product || !product.photos) return <div>Loading...</div>;
