@@ -11,7 +11,7 @@ function SingleCustomerPage() {
 
   useEffect(() => {
     axios
-      .post("http://localhost:5000/customer/products", data)
+      .post("https://inventory-management-backend-xdly.onrender.com/customer/products", data)
       .then((response) => {
         setProducts(response.data);
       });
