@@ -8,7 +8,7 @@ function Daybook() {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/daybook", {
+      const response = await axios.post("https://inventory-management-backend-xdly.onrender.com/daybook", {
         startDate: initialDate,
         endDate: finalDate,
       });
