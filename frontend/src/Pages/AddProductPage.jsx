@@ -23,7 +23,7 @@ function AddProductPage() {
   //This useEffect will get Parties name from backend which will be used for names
   useEffect(() => {
     axios
-      .get("http://localhost:5000/customer/find-customer")
+      .get("https://inventory-management-backend-xdly.onrender.com/customer/find-customer")
       .then((response) => {
         setParties(response.data);
       });
@@ -40,7 +40,7 @@ function AddProductPage() {
     }
 
     const response = await axios.post(
-      "http://localhost:5000/product/photo-upload",
+      "https://inventory-management-backend-xdly.onrender.com/product/photo-upload",
       data,
       {
         headers: {
@@ -66,7 +66,7 @@ function AddProductPage() {
         photos: imagePreviews,
       };
       const response = await axios.post(
-        "http://localhost:5000/product/add-product",
+        "https://inventory-management-backend-xdly.onrender.com/product/add-product",
         data,
         {
           withCredentials: true,
