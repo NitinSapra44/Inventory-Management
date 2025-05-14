@@ -17,7 +17,7 @@ export default function ImageSlider() {
   const data = { id };
   useEffect(() => {
     axios
-      .post("http://localhost:5000/product/find-product-by-id", data)
+      .post("https://inventory-management-backend-xdly.onrender.com/product/find-product-by-id", data)
       .then((response) => {
         if (response.data.cover) {
           setProduct(response.data.cover);
@@ -45,7 +45,7 @@ export default function ImageSlider() {
   async function setPrintTransaction(ev) {
     ev.preventDefault();
     const printData = { productId: id, type: "print", quantity: printQuantity };
-    await axios.post("http://localhost:5000/transaction", printData);
+    await axios.post("https://inventory-management-backend-xdly.onrender.com/transaction", printData);
 
     navigate(0);
   }
@@ -57,7 +57,7 @@ export default function ImageSlider() {
       type: "dispatch",
       quantity: dispatchQuantity,
     };
-    await axios.post("http://localhost:5000/transaction", dispatchData);
+    await axios.post("https://inventory-management-backend-xdly.onrender.com/transaction", dispatchData);
 
     navigate(0);
   }
