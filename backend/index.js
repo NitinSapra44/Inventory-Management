@@ -27,7 +27,7 @@ mongoose
 //Important Middlewares
 app.use(
   cors({
-    origin: "http://localhost:5173", // Your frontend URL
+    origin: "https://inventory-management-frontend-eugc.onrender.com", // Your frontend URL
     credentials: true, // If using cookies/auth headers
   })
 );
