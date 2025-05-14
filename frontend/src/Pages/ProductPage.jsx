@@ -10,7 +10,7 @@ function ProductPage() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/product/find-products")
+      .get("https://inventory-management-backend-xdly.onrender.com/product/find-products")
       .then((response) => {
         setProducts(response.data);
       });
