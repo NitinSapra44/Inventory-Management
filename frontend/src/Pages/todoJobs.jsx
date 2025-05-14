@@ -38,7 +38,7 @@ function ToDoJobs() {
                   <img
                     src={
                       txn.photos && txn.photos[0]
-                        ? `http://localhost:5000/uploads/${txn.photos[0]}`
+                        ? txn.photos[0]
                         : "/default.png"
                     }
                     alt="Product"

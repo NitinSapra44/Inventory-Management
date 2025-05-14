@@ -49,6 +49,7 @@ function AddProductPage() {
       }
     );
     const newPhotos = response.data.fileNames;
+
     setImagePreviews((prev) => [...prev, ...newPhotos]);
   }
 
@@ -178,7 +179,7 @@ function AddProductPage() {
             {imagePreviews.map((img) => (
               <div className="w-full aspect-square rounded-lg overflow-hidden border">
                 <img
-                  src={"http://localhost:5000/uploads/" + img}
+                  src={img}
                   //   alt={`Preview ${index + 1}`}
                   className="object-cover w-full h-full"
                 />

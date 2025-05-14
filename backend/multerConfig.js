@@ -1,13 +1,12 @@
 import multer from "multer";
+import { CloudinaryStorage } from "multer-storage-cloudinary";
+import cloudinary from "./cloudinary.js";
 
-//Multer Settings as this will be used as middleware in product api
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, "uploads/");
-  },
-  filename: (req, file, cb) => {
-    const newName = "photo" + Date.now() + ".jpg";
-    cb(null, newName);
+const storage = new CloudinaryStorage({
+  cloudinary,
+  params: {
+    folder: "uploads",
+    allowed_formats: ["jpeg", "png", "jpg"],
   },
 });
 

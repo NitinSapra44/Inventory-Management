@@ -45,10 +45,7 @@ export default function ImageSlider() {
   async function setPrintTransaction(ev) {
     ev.preventDefault();
     const printData = { productId: id, type: "print", quantity: printQuantity };
-    const response = await axios.post(
-      "http://localhost:5000/transaction",
-      printData
-    );
+    await axios.post("http://localhost:5000/transaction", printData);
 
     navigate(0);
   }
@@ -60,10 +57,7 @@ export default function ImageSlider() {
       type: "dispatch",
       quantity: dispatchQuantity,
     };
-    const response = await axios.post(
-      "http://localhost:5000/transaction",
-      dispatchData
-    );
+    await axios.post("http://localhost:5000/transaction", dispatchData);
 
     navigate(0);
   }
@@ -78,9 +72,7 @@ export default function ImageSlider() {
           <div className="relative w-full h-[500px]">
             {/* Main Image */}
             <img
-              src={
-                "http://localhost:5000/uploads/" + product.photos[currentIndex]
-              }
+              src={product.photos[currentIndex]}
               className="w-full h-full object-cover rounded"
               alt={`Slide ${currentIndex}`}
             />
@@ -175,7 +167,7 @@ export default function ImageSlider() {
               >
                 <img
                   className="rounded-t-lg w-full h-32 object-cover"
-                  src={`http://localhost:5000/uploads/${product.photos[0]}`}
+                  src={product.photos[0]}
                   alt=""
                 />
                 <div className="p-2 flex flex-row gap-4 items-center justify-between">

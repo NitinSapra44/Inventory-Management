@@ -4,7 +4,8 @@ import productSchema from "../models/product.js";
 const Product = mongoose.model("product", productSchema);
 
 function handleImageUpload(req, res) {
-  const fileNames = req.files.map((file) => file.filename); // Extract the new filenames
+  console.log(req.files);
+  const fileNames = req.files.map((file) => file.path); // Extract the new filenames
   res.json({ fileNames });
 }
 

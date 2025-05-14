@@ -31,7 +31,7 @@ function SingleCustomerPage() {
             <div>
               <img
                 className="rounded-t-lg w-full h-32 object-cover"
-                src={"http://localhost:5000/uploads/" + product.photos[0]}
+                src={product.photos[0]}
                 alt=""
               />
             </div>

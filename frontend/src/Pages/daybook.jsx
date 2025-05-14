@@ -73,7 +73,7 @@ function Daybook() {
                   <img
                     src={
                       txn.productId?.photos?.[0]
-                        ? `http://localhost:5000/uploads/${txn.productId.photos[0]}`
+                        ? txn.productId.photos[0]
                         : "/default.png"
                     }
                     alt="Product"
