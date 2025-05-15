@@ -16,6 +16,7 @@ import Daybook from "./Pages/daybook.jsx";
 import ToDoJobs from "./Pages/todoJobs.jsx";
 import AddCustomer from "./Pages/AddCustomerPage.jsx";
 import SingleCustomerPage from "./Pages/SingleCustomerPage.jsx";
+import ProtectedRoute from "../protectedRoutes.jsx";
 function App() {
   return (
     <>
@@ -26,14 +27,70 @@ function App() {
             <Route path={"/about"} element={<AboutPage />} />
             <Route path={"/login"} element={<LoginPage />} />
             <Route path={"/register"} element={<RegisterPage />} />
-            <Route path={"/products"} element={<ProductPage />} />
-            <Route path={"/customers"} element={<CustomerPage />} />
-            <Route path={"/products/add"} element={<AddProductPage />} />
-            <Route path={"/product/:id"} element={<ImageSlider />} />
-            <Route path={"/daybook"} element={<Daybook />} />
-            <Route path={"/jobs"} element={<ToDoJobs />} />
-            <Route path={"/customer/add"} element={<AddCustomer />} />
-            <Route path={"/customers/:id"} element={<SingleCustomerPage />} />
+            <Route
+              path={"/products"}
+              element={
+                <ProtectedRoute>
+                  <ProductPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path={"/customers"}
+              element={
+                <ProtectedRoute>
+                  <CustomerPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path={"/products/add"}
+              element={
+                <ProtectedRoute>
+                  <AddProductPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path={"/product/:id"}
+              element={
+                <ProtectedRoute>
+                  <ImageSlider />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path={"/daybook"}
+              element={
+                <ProtectedRoute>
+                  <Daybook />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path={"/jobs"}
+              element={
+                <ProtectedRoute>
+                  <ToDoJobs />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path={"/customer/add"}
+              element={
+                <ProtectedRoute>
+                  <AddCustomer />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path={"/customers/:id"}
+              element={
+                <ProtectedRoute>
+                  <SingleCustomerPage />
+                </ProtectedRoute>
+              }
+            />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
