@@ -24,7 +24,6 @@ const UserState = (props) => {
           console.log(error);
           const message = error?.response?.data.Message || "Please Login first";
           alert(message);
-          navigate("/login");
         });
     }
   }, []);
