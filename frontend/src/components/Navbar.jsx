@@ -22,7 +22,7 @@ function Navbar() {
     navigate("/login");
   };
 
-  if (!ready) return null;
+  //if (!ready) return null;
 
   return (
     <div className="flex flex-col md:flex-row md:justify-between items-start md:items-center p-3 relative bg-white shadow-md z-50">
