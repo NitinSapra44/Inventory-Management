@@ -11,7 +11,7 @@ function Navbar() {
 
   const logout = async () => {
     await axios.post(
-      "http://localhost:5000/user/logout",
+      "https://inventory-management-backend-xdly.onrender.com/user/logout",
       {},
       { withCredentials: true }
     );
