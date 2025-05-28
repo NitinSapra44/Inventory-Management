@@ -25,4 +25,16 @@ this will install all the required dependencies to run this project.
 Also,we are using concurrently in our project so when you install all the dependencies in both the folders you can come to root directory and run the command npm run dev this will turn on both frontend and backend simoultaneously.
 
 
+Create a .env file inside /backend with the following:
+
+PORT=5000
+url=your_mongodb_connection_string
+jwtSecret=your_jwt_secret_key
+CLOUDINARY_API_SECRET=your_cloudinary_API_secret
+CLOUDINARY_API_KEY=your_clousinary_API_key
+CLOUDINARY_CLOUD_NAME=your_clousinary_API_name
+
+
+
+
 The App is running Live on "https://inventory-management-frontend-eugc.onrender.com".
