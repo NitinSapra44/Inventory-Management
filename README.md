@@ -36,8 +36,8 @@ A full-stack inventory management system designed specifically for a **box manuf
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/your-repo.git
-cd your-repo
+git clone https://github.com/NitinSapra44/Inventory-Management
+cd Inventory-Management
 ```
 
 ### Step 2: Install Dependencies
